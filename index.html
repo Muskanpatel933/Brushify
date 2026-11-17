@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brushify - Text Editor</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Brushify</h1>
+
+    
+    <div id="editor" contenteditable="true">Write Text</div>
+
+    
+
+        <button id="downloadBtn" onclick="downloadText()">Download</button>
+    
+
+    
+    <div class="controls-container">
+        
+        
+        <div class="control-card">
+            <h2>Background</h2>
+            <div class="color-options">
+                <button class="circle-btn" style="background-color: rgba(169, 29, 8, 0.69);" onclick="changeBg('rgb(169, 29, 8, 0.69)')"></button>
+                <button class="circle-btn" style="background-color: rgb(172, 27, 121);" onclick="changeBg('rgb(172, 27, 121)')"></button>
+                <button class="circle-btn" style="background-color: rgb(5, 142, 187);" onclick="changeBg('rgb(5, 142, 187)')"></button>
+                <button class="circle-btn" style="background-color: rgb(16, 144, 16);" onclick="changeBg('rgb(16, 144, 16)')"></button>
+            </div>
+        </div>
+
+        
+        <div class="control-card">
+            <h2>Text Color</h2>
+            <div class="color-options">
+                <button class="circle-btn" style="background-color: off whitesmoke;" onclick="changeTextColor('whitesmoke')"></button>
+                <button class="circle-btn" style="background-color: rgb(233, 208, 208);" onclick="changeTextColor('rgb(233, 208, 208)')"></button>
+                <button class="circle-btn" style="background-color: rgb(129, 199, 220);" onclick="changeTextColor('rgb(129, 199, 220)')"></button>
+                <button class="circle-btn" style="background-color: rgb(238, 240, 157);" onclick="changeTextColor('rgb(238, 240, 157)')"></button>
+                <button class="circle-btn" style="background-color: rgb(141, 205, 141);" onclick="changeTextColor('rgb(141, 205, 141)')"></button>
+            </div>
+        </div>
+
+    
+        <div class="control-card">
+            <h2>Font Family</h2>
+            <select id="fontSelector" onchange="changeFont(this.value)">
+                <option value="Arial, sans-serif">Arial</option>
+                <option value="'Courier New', monospace">Courier New</option>
+                <option value="'Georgia', serif">Georgia</option>
+                <option value="'Times New Roman', serif">Times New Roman</option>
+                <option value="'Verdana', sans-serif">Verdana</option>
+            </select>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
